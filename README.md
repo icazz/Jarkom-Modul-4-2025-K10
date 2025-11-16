@@ -108,4 +108,18 @@ Setelah alokasi IP, bisa langsung konfigurasi setiap nodenya, script bisa di aks
 
 Berikut test ping dari beberapa sample:
 
-`progress`
+- ping Amonsul dari Minastir
+
+![3](assets/minastir_amonsul.png)
+
+- ping Amroth dari Amonsul
+
+![3](assets/amonsul_amroth.png)
+
+- ping Morgoth dari Anor
+
+![3](assets/anor_morgoth.png)
+
+- ping Minastir dari Elrond
+
+![3](assets/elrond_minastir.png)
