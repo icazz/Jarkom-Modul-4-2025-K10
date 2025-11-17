@@ -1,11 +1,13 @@
 # Jarkom-Modul-4-2025-K10
-## Anggota Kelompok 10
-| Nama                      | NRP        | Pembagian |
-| --------------------------| ---------- | --------- |
-| Bayu Kurniawan            | 5027241055 | CPT CIDR  |
-| Ica Zika Hamizah          | 5027241058 | GNS VLSM  |
 
-### GNS VLSM 
+## Anggota Kelompok 10
+
+| Nama             | NRP        | Pembagian |
+| ---------------- | ---------- | --------- |
+| Bayu Kurniawan   | 5027241055 | CPT CIDR  |
+| Ica Zika Hamizah | 5027241058 | GNS VLSM  |
+
+### GNS VLSM
 
 Pertama buat topologi sesuai soal di GNS, agar memudahkan pengerjaan, tandai setiap subnet dan beri nama seperti A1, A2, dll. Dalam topologi dibawah ini terdapat 23 subnet.
 
@@ -30,13 +32,12 @@ Untuk memudahkan pembagian dan perhitungan, buat pohon untuk persebaran IP-nya, 
 
 ![1](assets/1.png)
 
-
 ![2](assets/2.png)
-
 
 ![3](assets/3.png)
 
 Urutkan dari Terbesar, aturan wajib VLSM: Semua kebutuhan subnet harus diurutkan dari yang terbesar ke yang terkecil. Pastikan blok IP terbesar (seperti `/22`) mendapatkan "ruang" terlebih dahulu sebelum bloknya dipecah-pecah oleh subnet yang lebih kecil. Urutannya adalah:
+
 - A11 (875 host -> butuh blok 1024 IP / `/22`)
 - A3 (661 host -> butuh blok 1024 IP / `/22`)
 - A12 (503 host -> butuh blok 512 IP / `/23`)
@@ -105,6 +106,9 @@ Dengan metode ini, semua subnet berhasil dialokasikan dengan sangat efisien, han
 #### Konfigurasi
 
 Setelah alokasi IP, bisa langsung konfigurasi setiap nodenya, script bisa di akses di directory `script`.
+
+routing dilakukan pada device router dengan perintah:
+`route add -net <NID subnet> netmask <netmask> gw <IP gateway>`
 
 Berikut test ping dari beberapa sample:
 
